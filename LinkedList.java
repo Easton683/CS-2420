@@ -1,8 +1,10 @@
 
 public class LinkedList<AnyType> {
 
-	public LinkedList( ) {
+    public Node<AnyType> nextNode;
 
+	public LinkedList( ) {
+        this.nextNode = null;
 	}
 
     /**
@@ -10,15 +12,18 @@ public class LinkedList<AnyType> {
      * @return true if empty, false otherwise.
      */
     public boolean isEmpty( ) {
-    	return Math.random() <0.5;
+    	if(nextNode.equals(null)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
      * Make the list logically empty.
      */
-    public void makeEmpty( )
-    {
-
+    public void makeEmpty( ){
+        this.nextNode = null;
     }
 
 
@@ -27,7 +32,7 @@ public class LinkedList<AnyType> {
      * @param x the item to insert.
      */
     public void insertFront( AnyType x ) {
-
+        this.nextNode.setItem(x);
     }
 
     /**
@@ -36,7 +41,7 @@ public class LinkedList<AnyType> {
      * @return a Node; node is not valid if item is not found.
      */
     public Node<AnyType> find( AnyType x ) {
-    	return null;
+        return null;
     }
 
     /**
