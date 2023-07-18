@@ -67,7 +67,14 @@ public class Assignment_03_31_BigComplex {
 		//TODO - This method should follow a similar pattern to the example in the book - where you check if a is actually a complex number
 		if (!(a instanceof Assignment_03_31_BigComplex)){
 			return false;
+		} 
+		Assignment_03_31_BigComplex aCheck = (Assignment_03_31_BigComplex) a;
+		if (aCheck.imaginary.equals(this.imaginary)) {
+			if (aCheck.real.equals(this.real)) {
+				return true;
+			}
 		}
+		return false;
 	}
 	
 	@Override
@@ -76,7 +83,12 @@ public class Assignment_03_31_BigComplex {
 		//NOTE: This method needs to work correctly so that almost all the tests work!!!!!
 		//NOTE: Also, don't just always put the i part on - only if i isn't 0
 		//NOTE: You do NOT have to convert the + to a - if the imaginary part is negative!!! 
-		return "TODO";
+		String realString = this.real.toString();
+		if (this.imaginary.toString().equals("0")) {
+			return realString;
+		} else {
+			return (realString + " + " + this.imaginary.toString() + "i");
+		}
 	}
 	
 	
