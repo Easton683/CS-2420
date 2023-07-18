@@ -1,9 +1,11 @@
 
 public class LinkedList<AnyType> {
 
-    public Node<AnyType> nextNode;
+	public AnyType data;
+	public Node<AnyType> nextNode;
 
 	public LinkedList( ) {
+        this.data = null;
         this.nextNode = null;
 	}
 
@@ -40,8 +42,15 @@ public class LinkedList<AnyType> {
      * @param x the item to search for.
      * @return a Node; node is not valid if item is not found.
      */
+
+     //I am going to have to do some more research on these last few methods to figure out hot to loop through the list.
     public Node<AnyType> find( AnyType x ) {
         return null;
+        /*if (! this.nextNode.equals(x)) {
+            return this.nextNode.getItem();
+        } else{
+            return this.nextNode;
+        }*/
     }
 
     /**

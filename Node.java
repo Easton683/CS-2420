@@ -3,7 +3,6 @@ class Node<AnyType>
 {
 	public AnyType data;
 	public Node<AnyType> nextNode;
-	public String b;
 
 	public Node( ) {
 		this.data = null;
