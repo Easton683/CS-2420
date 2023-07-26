@@ -11,16 +11,24 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class test {
+	public static int counter = 0;
 public static void main(String[] args) {
-	Long startTime = System.nanoTime();
-	Long endTime = System.nanoTime();
-	Long totalTime = endTime - startTime;
-	System.out.println(totalTime);
+	System.out.println(fib(5));
+	System.out.println("The counter is: "+counter);
 }
 
 	public static void closestNumber(int size) {
 		int a[] = new int[size];
 	}
+
+	public static long fib( int n){
+		counter++;
+		if (n <= 1){
+			 return n;
+		} else {
+			 return fib(n-1) + fib(n-2);
+		}
+   }
 
 	public static int foo(){
 		try{
