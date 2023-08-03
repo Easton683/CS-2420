@@ -13,8 +13,7 @@ import java.nio.file.Path;
 public class test {
 	public static int counter = 0;
 public static void main(String[] args) {
-	System.out.println(fib(5));
-	System.out.println("The counter is: "+counter);
+
 }
 
 	public static void closestNumber(int size) {
