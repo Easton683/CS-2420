@@ -11,7 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class test {
-	public static int counter = 0;
+
 public static void main(String[] args) {
 	int[] hundred = new int[100];
 	int[] thousand = new int[1000];
@@ -41,7 +41,7 @@ public static void main(String[] args) {
 		arrStack.pop();
 	}
 	end = System.nanoTime();
-	System.out.println("arrStack");
+	System.out.println("arrStack: ");
 	System.out.println("100 - " + (end-begin));
 
 	System.gc();
@@ -115,7 +115,7 @@ public static void main(String[] args) {
 		lStack2.pop();
 	}
 	end = System.nanoTime();
-	System.out.println("100 - " + (end-begin));
+	System.out.println("10000 - " + (end-begin));
 
 	System.gc();
 	ListStack lStack3 = new ListStack<>();
@@ -131,36 +131,4 @@ public static void main(String[] args) {
 
 }
 
-	public static void closestNumber(int size) {
-		int a[] = new int[size];
-	}
-
-	public static long fib( int n){
-		counter++;
-		if (n <= 1){
-			 return n;
-		} else {
-			 return fib(n-1) + fib(n-2);
-		}
-   }
-
-	public static int foo(){
-		try{
-			return 0;
-		}finally{
-			return 1;
-		}
-	}
-
-	public static boolean isAPrefix(String prefix, String s) {
-		//It is really tempting to use the existing isAPrefix method of the class string....
-		//Hopefully it is not too much trouble for you to use a loop instead?
-		String tempString = s.substring(0, prefix.length());
-		System.out.println(tempString);
-		if (tempString.equals(prefix)){
-			return true;
-		}else {
-			return false;
-		}
-	}
 }
