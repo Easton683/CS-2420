@@ -1,6 +1,7 @@
 
 public class Assignment_19 {
 
+
 	//19.15
 	public static <AnyType extends Comparable<? super AnyType>> BinaryNode<AnyType> findMin(BinarySearchTree<AnyType> t) {
 		//This just calls the BinaryNode method, You can change this if you want, but I found it easier
@@ -99,7 +100,7 @@ public class Assignment_19 {
 	//so the screenshot of no errors in the main is all I really need
 	private static <AnyType extends Comparable<? super AnyType>> String toString(BinaryNode<AnyType> t) {
 		//Note, if you are going to use recursion, use the methods calls like toString(t) instead of t.toString() as you would if this method was inside the BinaryNode class
-		if (t==null) {
+		/*if (t==null) {
 			return "";
 		}
 		StringBuilder builder = new StringBuilder();
@@ -107,17 +108,16 @@ public class Assignment_19 {
 		builder.append(t.element);
 		builder.append(", ");
 		builder.append(toString(t.right));
-		return builder.toString().substring(0, builder.toString().length());
-		/*String result = "";
-		result += toString(t.left);
-		if (t.right!=null) {
-		result += t.element + ", ";			
-		}else{
-			result +=t.element;
+		return builder.toString().substring(0, builder.toString().length()-2);*/
+		if (t==null) {
+			return "";
 		}
 
+		String result = "";
+		result += toString(t.left);
+		result += " " + t.element;
 		result += toString(t.right);
-		return result;*/
+		return result;
 	}
 
 }
